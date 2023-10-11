@@ -41,9 +41,9 @@
 
   ## links
   -  Link of my [Github repository](https://github.com/Sabinkthapa/NoteTaker.git)
-  -  Link of my [Heroku](https://simply-notetaker-fd25a61d938e.herokuapp.com/)
-  - working app screenshots ![working app image](./Image/app-running1.png)
-  - working app screenshots ![working app image](./Image/app-running2.png)
+  -  Link of apps in [Heroku](https://simply-notetaker-fd25a61d938e.herokuapp.com/)
+  - working app image-1 ![working app image](./Image/app-running1.png)
+  - working app image-2 ![working app image](./Image/app-running2.png)
   
 
   ## Credits
