@@ -42,8 +42,8 @@
   ## links
   -  Link of my [Github repository](https://github.com/Sabinkthapa/NoteTaker.git)
   -  Link of my [Heroku](https://simply-notetaker-fd25a61d938e.herokuapp.com/)
-  - working app screenshots ![working app image](/develop/image/app-running1.png)
-   - working app screenshots ![working app image](/develop/image/app-running2.png)
+  - working app screenshots ![working app image](./Image/app-running1.png)
+  - working app screenshots ![working app image](./Image/app-running2.png)
   
 
   ## Credits
@@ -54,4 +54,4 @@
 
   ## License
    All resources provided by this project are available for free use and distribution,subject to the term of Apache license.
-                                                (c)Copyright 2023 Sabin
+                                      (c)Copyright 2023 Sabin
