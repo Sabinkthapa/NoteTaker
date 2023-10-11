@@ -42,8 +42,9 @@
   ## links
   -  Link of my [Github repository](https://github.com/Sabinkthapa/NoteTaker.git)
   -  Link of my [Heroku](https://simply-notetaker-fd25a61d938e.herokuapp.com/)
-  -  link of [working app image](/develop/image/app-running1.png)
-  - link of [working app image](/develop/image/app-running2.png)
+  - working app screenshots ![working app image](/develop/image/app-running1.png)
+   - working app screenshots ![working app image](/develop/image/app-running2.png)
+  
 
   ## Credits
   - Link of Documentation [Expressjs](https://expressjs.com/)
