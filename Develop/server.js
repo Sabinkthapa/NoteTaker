@@ -46,17 +46,54 @@ app.post('/api/notes', (req, res) => {
     //add new note to the arrat
     notes.push(newNote);
 
-    // use fs writefile method to update notes
+  // use fs writefile method to update notes
 
-    fs.writeFile(path.join(__dirname, '/db/db.json'), JSON.stringify(notes), 'utf8', (err) => {
-        if (err) {
-            console.error(err);
-            return res.status(500).json({eror:"An error occurred while saving notes"});
+  fs.writeFile(path.join(__dirname, '/db/db.json'), JSON.stringify(notes), 'utf8', (err) => {
+    if (err) {
+        console.error(err);
+        return res.status(500).json({eror:"An error occurred while saving notes"});
+    }
+    res.json(newNote);
+});
+});
+});
+
+
+// Delete route to delete note by id
+    app.delete('/api/notes/:id', (req, res) => {
+        const noteID= req.params.id;
+        fs.readFile(path.join(__dirname, "/db/db.json"), "utf8", (err, data) =>{
+            if (err) {
+                console.error(err);
+                return res.status(500).json({error: "Error reading notes from database"});
+            }
+
+    let notes =JSON.parse(data);
+
+    let noteIndexTodelete = -1;
+    notes.forEach((note, index) => {
+        if (note.id === noteID) {
+            noteIndexTodelete =index;
         }
-        res.json(newNote);
     });
-});
-});
+
+    if (noteIndexTodelete === -1){
+        return res.status(404). json({error:"Note not found"});
+    }
+    //Remove note with specified ID
+    notes.splice(noteIndexTodelete, 1);
+
+    fs.writeFile(path.join(__dirname, "/db/db.json"), JSON.stringify(notes), "utf8", (err) => {
+        if (err) {
+            console.log(err);
+            return res.status(500).json({error: "An error occurred while saving notes "});
+        }
+        res.json({messgage: "Note deleted successfully"});
+    });
+      
+    });
+
+    });
     
 app.listen(PORT, () => {
     console.log(`listening on port at http://localhost:${PORT}`);
